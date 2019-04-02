@@ -2,3 +2,9 @@
 
 @include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
 @include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+@include font-face("Fira-Bold", "../fonts/FiraSans-Bold/FiraSans-Bold");
+@include font-face("Fira-Light", "../fonts/FiraSans-Light/FiraSans-Light");
+@include font-face(
+  "Fira-Regular",
+  "../fonts/FiraSans-Regular/FiraSans-Regular"
+);
