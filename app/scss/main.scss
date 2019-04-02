@@ -11,7 +11,95 @@
   color: #fff;
 }
 
+.grid-item-image {
+  background-image: url("../img/hero.png");
+}
+
 h1 {
+  font-size: 72px;
+  font-family: "Fira-Light";
+}
+
+.grid-item:nth-child(1) p {
+  font-size: 30px;
+  font-family: "Fira-Light";
+}
+
+.grid-item:nth-child(1) span {
+  font-size: 30px;
+  font-family: "Fira-Bold";
+}
+
+.grid-item:nth-child(3) h2 {
+  font-size: 24px;
+  font-family: "Fira-Bold";
+  color: #666666;
+  text-transform: uppercase;
+}
+
+.grid-item:nth-child(3) p {
+  font-size: 36px;
+  font-family: "Fira-Light";
+  color: #666;
+}
+
+.grid-item:nth-child(8) h2 {
+  font-size: 24px;
+  font-family: "Fira-Bold";
+  text-transform: uppercase;
+}
+
+.grid-item:nth-child(8) p {
+  font-size: 36px;
+  font-family: "Fira-Light";
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid-item-block h2 {
+  font-size: 36px;
+  font-family: "Fira-Bold";
+  text-transform: uppercase;
+  color: #2ebd59;
+}
+
+.grid-item-block h3 {
+  font-size: 18px;
   font-family: "Fira-Regular";
-  font-size: 20px;
+  text-transform: uppercase;
+  color: #2ebd59;
+}
+
+.grid-item-block a {
+  font-size: 18px;
+  font-family: "Fira-Bold";
+  text-transform: uppercase;
+  color: #2ebd59;
+}
+
+.grid-item:nth-child(13) h2,
+.grid-item:nth-child(14) h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: "Fira-Bold";
+}
+
+.grid-item:nth-child(13) p,
+.grid-item:nth-child(14) p {
+  font-size: 36px;
+  font-family: "Fira-Light";
+}
+
+.footer-item:nth-child(1) h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: "Fira-Bold";
+}
+
+.footer-item:nth-child(1) p {
+  font-size: 14px;
+  font-family: "Fira-Light";
+  color: #8a8a8a;
 }
