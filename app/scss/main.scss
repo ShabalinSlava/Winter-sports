@@ -13,7 +13,10 @@
 
 .grid {
   display: grid;
-  grid-template-areas: "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n";
+  grid-template-areas: "a a" "b b" "c c" "d e" "f g" "h h" "i i" "j j" "k k" "l l" "m m" "n n";
+
+  @include respond-to(tablet) {
+  }
 
   @include respond-to(desktop) {
     grid-template-areas:
@@ -60,6 +63,7 @@ button {
   background-image: url("../img/hero.png");
   width: 100%;
   height: 900px;
+  background-size: cover;
 
   @include respond-to(tablet) {
     justify-content: center;
@@ -72,6 +76,7 @@ button {
 
 .grid-item:nth-child(1) .wrap {
   line-height: 1.2;
+  padding: 0px 20px;
   margin: 50px 0px 0px 212px;
 
   @include respond-to(tablet) {
@@ -79,6 +84,7 @@ button {
   }
 
   @include respond-to(desktop) {
+    padding: 0px;
     margin: 50px 0px 0px 212px;
   }
 }
@@ -86,9 +92,9 @@ button {
 .grid-item-bg:nth-child(2) {
   grid-area: b;
   background-image: url("../img/self.png");
-  max-width: 800px;
   width: 100%;
   height: 500px;
+  background-size: cover;
 }
 
 .grid-item-bg:nth-child(3) {
@@ -100,7 +106,7 @@ button {
 .grid-item-bg:nth-child(4) {
   grid-area: d;
   background-image: url("../img/lift.png");
-  max-width: 400px;
+  background-size: cover;
   width: 100%;
   height: 515px;
 }
@@ -108,7 +114,7 @@ button {
 .grid-item-bg:nth-child(5) {
   grid-area: e;
   background-image: url("../img/skier.png");
-  max-width: 400px;
+  background-size: cover;
   width: 100%;
   height: 515px;
 }
@@ -116,7 +122,7 @@ button {
 .grid-item-bg:nth-child(6) {
   grid-area: f;
   background-image: url("../img/ski.png");
-  max-width: 400px;
+  background-size: cover;
   width: 100%;
   height: 515px;
 }
@@ -124,7 +130,7 @@ button {
 .grid-item-bg:nth-child(7) {
   grid-area: g;
   background-image: url("../img/mountain.png");
-  max-width: 400px;
+  background-size: cover;
   width: 100%;
   height: 515px;
 }
@@ -138,7 +144,7 @@ button {
 .grid-item-bg:nth-child(9) {
   grid-area: i;
   background-image: url("../img/inventory.png");
-  max-width: 400px;
+  background-size: cover;
   width: 100%;
   height: 515px;
 }
@@ -146,7 +152,7 @@ button {
 .grid-item-bg:nth-child(10) {
   grid-area: j;
   background-color: #3f729b;
-  max-width: 400px;
+  background-size: cover;
   width: 100%;
   height: 515px;
 }
@@ -157,6 +163,7 @@ button {
   background-image: url("../img/disco.png");
   width: 100%;
   height: 900px;
+  background-size: cover;
 }
 
 .grid-item-bg:nth-child(12) {
@@ -234,7 +241,7 @@ h1 {
   }
 
   @include respond-to(desktop) {
-    padding: 120px 0px;
+    padding: 120px 0px 0px 120px;
   }
 }
 
@@ -297,7 +304,7 @@ a {
 
   @include respond-to(tablet) {
     width: 100%;
-    padding: 80px 30px;
+    padding: 60px 30px;
   }
 
   @include respond-to(desktopLarge) {
@@ -413,6 +420,12 @@ a {
     padding: 96px 40px 150px 40px;
   }
 
+  @include respond-to(tabletLarge) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 96px 40px 150px 40px;
+  }
+
   @include respond-to(desktop) {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -432,14 +445,25 @@ a {
 
   @include respond-to(tablet) {
     margin-bottom: 50px;
+    max-width: 600px;
+  }
+
+  @include respond-to(tabletLarge) {
+    margin-bottom: 50px;
+    order: -1;
   }
 
   @include respond-to(desktop) {
     margin-bottom: 50px;
+    max-width: 500px;
+    margin-right: 20px;
   }
 
   @include respond-to(desktopLarge) {
+    order: 0;
     margin-bottom: 0px;
+    margin-right: 0px;
+    max-width: 300px;
   }
 
   @include respond-to(desktopHuge) {
@@ -456,22 +480,34 @@ a {
     max-width: 500px;
   }
 
+  @include respond-to(tabletLarge) {
+    width: 35%;
+  }
+
   @include respond-to(desktop) {
     max-width: 500px;
+    width: 50%;
   }
 
   @include respond-to(desktopLarge) {
     max-width: 180px;
+    width: 35%;
   }
 }
 
 .footer-wrap-container .wrap:nth-child(3) {
   max-width: 500px;
+  width: 100%;
 
   @include respond-to(tablet) {
     display: flex;
     flex-direction: column;
     max-width: 550px;
+  }
+
+  @include respond-to(tabletLarge) {
+    width: 90%;
+    order: -1;
   }
 
   @include respond-to(desktop) {
@@ -483,6 +519,7 @@ a {
   @include respond-to(desktopLarge) {
     display: block;
     max-width: 500px;
+    order: 0;
   }
 
   @include respond-to(desktopHuge) {
@@ -497,8 +534,12 @@ a {
 
 .footer-wrap-container .wrap:nth-child(2) .footer-item:nth-child(1) {
   @include respond-to(tablet) {
-    margin-bottom: 35px;
+    margin-bottom: 50px;
     padding-right: 150px;
+  }
+
+  @include respond-to(tabletLarge) {
+    padding-right: 0px;
   }
 
   @include respond-to(desktop) {
@@ -512,9 +553,15 @@ a {
   }
 }
 
+.footer-wrap-container .wrap:nth-child(2) .footer-item:nth-child(2) {
+  @include respond-to(tablet) {
+    margin-bottom: 50px;
+  }
+}
+
 .footer-wrap-container .wrap:nth-child(3) .footer-item:nth-child(1) {
   @include respond-to(tablet) {
-    margin-bottom: 48px;
+    margin-bottom: 50px;
     padding-right: 100px;
   }
 
@@ -526,6 +573,12 @@ a {
   @include respond-to(desktopLarge) {
     margin-bottom: 78px;
     padding-right: 0px;
+  }
+}
+
+.footer-wrap-container .wrap:nth-child(3) .footer-item:nth-child(2) {
+  @include respond-to(tabletLarge) {
+    margin-bottom: 50px;
   }
 }
 
@@ -575,7 +628,11 @@ a {
 }
 
 .life-text {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+
+  @include respond-to(desktop) {
+    margin-bottom: 40px;
+  }
 }
 
 .copy {
